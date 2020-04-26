@@ -1,0 +1,514 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	text-align:center;
+	margin:10px;
+}
+
+#tudo{
+	width:1000px;
+	background:#FFF;
+	text-align:left;
+	margin:0 auto;
+	padding:5px;
+}
+
+#sessao{
+	height: 25px;
+	background: -moz-radial-gradient(40% 35%, farthest-side, #52658C, #B6BDD3) repeat-X;
+	background: -webkit-gradient(radial, 50% 50%, 450, 50% 50%, 70, from(#B6BDD3), to(#52658C)) repeat-X;
+    /*opacity: 0.8;*/
+    color: #000;
+}
+
+#sessao em{
+	float: right; 
+	margin: 5px 10px 0 0;
+}
+
+#sessao img{
+	float: right;
+	margin: 1px 5px 0 0;
+}
+
+
+#cabecalho{
+	height:100px;
+	//background-image: url(../Imagens/fundotopo.png);
+	text-align:left;
+}
+
+#cabecalho h1{
+	float:left;
+	margin: 17px 0 0 10px;
+}
+
+
+#barra{
+	margin-top:3px;
+	height:30px;
+	background: -moz-radial-gradient(40% 35%, farthest-side, #52658C, #B6BDD3) repeat-X;
+	background: -webkit-gradient(radial, 50% 50%, 450, 50% 50%, 70, from(#B6BDD3), to(#52658C)) repeat-X;
+	text-align:left;
+}
+
+#conteudo{
+	margin-top:3px;
+	background-color:#F8F8FF;
+	text-align:left;
+}
+
+#rodape {
+	height: 30px;
+	background: -moz-radial-gradient(40% 35%, farthest-side, #52658C, #B6BDD3) repeat-X;
+	background: -webkit-gradient(radial, 50% 50%, 450, 50% 50%, 70, from(#B6BDD3), to(#52658C)) repeat-X;
+	
+}
+
+#rodape h1{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#FFF;
+	font-size:11px;
+	float: left;
+	margin: 10px 0 0 550px;
+}
+
+#rodape a{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#FFF;
+	text-decoration:none;
+	font-size:11px;
+}
+
+#rodape a:hover{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:11px;
+	text-shadow: 0.1em 0.1em #333;
+}
+
+
+#banner{
+	padding:25px;
+	margin-left:30px;
+}
+
+#scroll{
+	overflow:auto;
+	height:300px;
+}
+
+#totalcompra{
+	width:700px;
+}
+
+.botaopadrao{
+	font-family: verdana;
+	font-size: 16px;
+	color:#0000FF;
+	height: 30px;
+	padding: 5px;
+	width: 300px;
+}
+
+.botaopadrao:disabled{
+	font-family: verdana;
+	font-size: 16px;
+	color:#ccc;
+	height: 30px;
+	padding: 5px;
+	width: 300px;
+}
+
+#barranav{
+	width: 1000px;
+	height: 20px;
+	background: #ccc;
+	margin-bottom:5px; 
+	padding: 2px 0 0 5px;
+}
+
+#barranav a:link, a:visited{
+	text-decoration: none;
+	font-size: 12px;
+	color: #333;
+	font-family: verdana;
+}
+
+#barranav a:hover{
+	text-decoration: none;
+	font-size: 12px;
+	color: #fff;
+	font-family: verdana;
+}
+
+.btn{
+	text-decoration: none;
+	padding: 2px;
+	border-radius: 2px;
+	font-family: verdana;
+	text-transform: capitalize;
+	border: solid #333 1px;
+	height: 25px;
+	background: #ccc;
+	font-size: 12px;
+}
+
+
+fieldset{
+width:1000px;
+margin: 0 auto;
+border:#CCC solid 1px;	
+padding-top: 10px;
+font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+text-transform: uppercase;
+}
+
+legend{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:16px;
+	color:#333;
+	border:#CCC solid 1px;	
+	padding: 1px;
+	margin-left: 15px;
+}
+
+label{
+float:left;
+width:250px;
+font-family:Verdana, Geneva, sans-serif;
+font-size:14px;
+color:#333;
+display:block;
+/*border-bottom:solid 1px;*/
+}
+
+label.error{
+	float:none;
+	color:#F00;
+	font-size: 10px;
+}
+
+#form{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+
+#form input[type="text"]{
+padding:1px;
+margin-bottom:5px;
+height: 25px;
+color:#333;
+border:solid #999 1px;
+}
+
+#form select{
+padding:1px;
+margin-bottom:5px;
+height: 25px;
+color:#333;
+border:solid #999 1px;
+}
+
+input[type="text"].meuinput{
+	padding:2px;
+	height:80px;
+	width:250px;
+	font-size:60px;
+	color:#00F;
+	font-weight:bold;
+}
+
+#form .aviso{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color:#FF0000;
+	height: 30px;
+	width: 300px;
+	border: dotted #FF0000 2px;
+	border-radius: 5px;
+	background: #CCC;
+}
+
+#form input.padrao{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bolder;
+	font-size: 16px;
+	color:#0000FF;
+	height: 30px;
+	padding: 5px;
+}
+
+#form p.exibir{
+	color: #333;
+	width: 350px;
+	border-bottom: #333 dotted 1px;
+}
+
+#renovacaoemergencia a{
+	font-size:10px;
+}
+#renovacaoemergencia span{
+	font-size:12px;
+}
+
+.cancelacompra {
+	height: 30px;
+	width: 100px;
+	border:0px;
+	background: #FA8072;
+	color:#333;
+}
+
+.cancelacompra:hover {
+	height: 30px;
+	width: 100px;
+	border:0px;
+	background: #FFA500;
+	color:#333;
+}
+
+.finalizacompra {
+	height: 30px;
+	width: 120px;
+	border:0px;
+	background: #3CB371;
+	color:#333;
+}
+
+.finalizacompra:hover {
+	height: 30px;
+	width: 120px;
+	border:0px;
+	background: #00FF00;
+	color:#333;
+}
+
+
+select{
+margin-bottom:5px;
+height: 25px;
+text-align:center;
+color:#333;
+border:solid #333 1px;
+}
+
+br{
+clear:left;
+}
+
+p{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	color:#666;
+}
+
+table.bordasimples tr td{
+	border: solid 1px #999;
+	color:#333;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+}
+
+table.bordasimples tr th{
+	border: solid 1px #999;
+	color:#333;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+}
+
+table.bordaunica td, th{
+	border: solid 1px #999;
+	color:#333;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+}
+
+table.bordaunica{
+	border: none;
+	color:#333;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+}
+
+
+table.exibe tr td{
+	border: solid 1px #333333;
+	height: 30px;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-left: 10px;
+}
+
+
+
+table.exibe tr th{
+	border: solid 1px #333333;
+	height: 30px;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-left: 10px;
+}
+
+#eleicao td{
+	border-bottom: solid #DCDCDC 1px;
+	border-right: dashed #DCDCDC 1px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#eleicao th{
+	border: solid #999 1px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	background: #DCDCDC;
+}
+
+
+
+#carteira{ width: 100px; height: 60px; background: #008000; font-family: arial;}
+
+fieldset.login {
+	width: 300px;
+	margin: 40px 40px;;
+	padding: 2px;
+	border:none;
+}
+
+input[type="text"],[type="password"].login {
+	height: 30px;
+	color: #333;
+	font-size:16px;
+	font-family: Verdana, Geneva, sans-serif;
+	padding: 2px;
+	border: solid #333 1px;
+	border-radius: 5px;
+	border:none;
+}
+
+input[type="submit"].login {
+	height: 30px;
+	width: 80px;
+	color: #333;
+	font-size:16px;
+	font-family: Verdana, Geneva, sans-serif;
+	padding: 2px;
+	border: solid #333 1px;
+	border-radius: 5px;
+	border:none;
+}
+
+label.login{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color:#FFF;
+}
+
+
+/* menu horizontal-vertical*/
+ .menu-hv * { margin: 0; padding: 0;}
+ .menu-hv a { display: block; }
+ .menu-hv li { list-style: none; float: left; height: 1%; }
+ .menu-hv li ul { position: absolute; visibility: hidden; display: inline;}
+ .menu-hv li ul li { float: none; white-space: nowrap; display: inline; /* o inline  pro IE */}
+ .menu-hv li ul li ul { position: absolute; left: 100%; top: 0; }
+ .menu-hv li:hover ul, .menu-hv li.over ul { visibility: visible;}
+ .menu-hv li:hover ul ul, .menu-hv li.over ul ul { visibility: hidden;}
+ .menu-hv ul ul li:hover ul, .menu-hv ul ul li.over ul { visibility: visible;}
+ /* visual */
+ .menu-hv {
+	width: 780px;
+	margin: 0 0 0 12px;
+	height: 20px;
+	
+}
+
+.menu-hv a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+	padding: 0 10px;
+	line-height: 30px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+             .menu-hv a:hover { text-decoration:  none; color: #666;}
+             .menu-hv ul li ul {
+	background-color: #DCDCDC;
+}
+
+/* Arquivo Exibe Associado */
+
+#exibir h3{
+	font-size: 20px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+
+#exibir p.exibir{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-transform: capitalize;
+	float:left;
+	width:250px;
+	color: #333;
+	border-bottom: #333 dotted 1px;
+}
+
+#exibir fieldset{
+	text-transform: capitalize;
+}
+
+#exibir ul li{
+	list-style: none;
+	margin:0 0 10px 20px;
+}
+
+/*MODAL */
+
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+#boxes #dialog {
+  width:375px; 
+  height:203px;
+  padding:10px;
+  background-color:#ffffff;
+}
+
+#boxes #dialog1 {
+  width:375px; 
+  height:203px;
+  padding:10px;
+  background-color:#ffffff;
+}
+.close{display:block; text-align:right;}
+
