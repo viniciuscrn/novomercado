@@ -5,7 +5,14 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/".$_SESSION["nomeprojeto"]."/dao/Pro
 $codigo = $_POST["codigo"];
 
 if(is_numeric($codigo)){
+	if(!ProdutoDAO::existeCodigo($codigo)){
+		$_SESSION['mensagem'] = 'Código inexistente';
+		header('Location: index.php?pg=formpesquisaproduto'); 
+	}
+	
 	$produto = ProdutoDAO::pesquisaProdutoCodigo($codigo);
+	
+	
 ?>
 <h4>Dados do Produto</h4>
 <hr/>
@@ -18,6 +25,10 @@ if(is_numeric($codigo)){
 <p><a href="index.php?pg=formeditaproduto&id=<?= $produto->getId() ?>">Editar Produto</a></p>
 <?php	
 }else{
+	if(!ProdutoDAO::existeDescricao($codigo)){
+		$_SESSION['mensagem'] = 'Descrição inexistente';
+		header('Location: index.php?pg=formpesquisaproduto'); 
+	}
 	$produtos = ProdutoDAO::pesquisaProdutoDescricao($codigo);
 ?>
 <h4>Produtos Encontrados</h4>
@@ -41,7 +52,7 @@ if(is_numeric($codigo)){
 			<td><?= $produto->getQuantestoque() ?></td>
 			<td><?= $produto->getPreco() ?></td>
 			<td>
-				<a href="index.php?pg=formeditaproduto&id<?= $produto->getId() ?>" title="Editar Produto"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+				<a href="index.php?pg=formeditaproduto&id=<?= $produto->getId() ?>" title="Editar Produto"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
 				<a href="index.php?pg=excluirproduto&id=<?= $produto->getId() ?>" title="Excluir Produto"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 			</td>
 		</tr>

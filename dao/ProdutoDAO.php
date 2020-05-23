@@ -25,6 +25,18 @@ class ProdutoDAO
             return FALSE;
     }
 
+     // Função para saber se existe descrição de produto cadastrado
+    public static function existeDescricao($descricao)
+    {
+        $con = conectar();
+        $query = $con->query("SELECT id FROM produto WHERE descricao like '%$descricao%'")->fetchAll();
+        if (count($query) > 0)
+            return TRUE;
+        else
+            return FALSE;
+    }
+
+
     // Metodo para cadastrar um novo produto
     public static function cadastroProduto($produto)
     {
@@ -100,7 +112,7 @@ class ProdutoDAO
         $cont = 0;
         while ($row = $query->fetch(PDO::FETCH_OBJ)) {
             $produto = new Produto();
-            $produto->setid($row->id);
+            $produto->setId($row->id);
             $produto->setCodigo($row->codigo);
             $produto->setDescricao($row->descricao);
             $produto->setQuantestoque($row->quantestoque);

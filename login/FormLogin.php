@@ -35,7 +35,7 @@ session_start();
                             <div class="form-group">
                                 <input type="password" class="form-control" name="senha" placeholder="Informe a Senha">
                             </div>
-                            <input type="submit" id="sendlogin" class="btn btn-primary">
+                            <input type="submit" id="sendlogin" class="btn btn-primary" value="Entrar">
                         </form>
                     </div>
                 </div>
