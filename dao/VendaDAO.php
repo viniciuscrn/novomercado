@@ -165,9 +165,9 @@ class VendaDAO {
 
 		try {
 			$stmte = $con->prepare("SELECT sum(total) FROM `venda` WHERE usuario_idusuario = ? and dia BETWEEN ? and ?");
-			$stmte->bindParam(1, $idusuario , PDO::PARAM_INT);
-			$stmte->bindParam(2, $datainicio , PDO::PARAM_INT);
-			$stmte->bindParam(3, $datafim , PDO::PARAM_INT);
+			$stmte->bindParam(1, $idusuario);
+			$stmte->bindParam(2, $datainicio);
+			$stmte->bindParam(3, $datafim);
 			$stmte->execute();
 			$count = $stmte->fetchColumn();
 			return $count;
