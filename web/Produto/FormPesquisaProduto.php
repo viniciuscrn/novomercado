@@ -12,7 +12,7 @@
         <div class="row">
       		<div class="form-group col-md-4">
       			<label for="codigo">Nome ou código:*</label>
-      			<input type="text" id="codigo" name="codigo" class="form-control" required />
+      			<input type="text" id="codigo" name="codigo" class="form-control" autofocus="" required />
       		</div>
          </div> 
          <input type="submit" value="Pesquisar" class="btn btn-primary" name="">
