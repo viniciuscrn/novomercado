@@ -1,5 +1,9 @@
 <?php 
+require_once($_SERVER['DOCUMENT_ROOT'] . "/" . $_SESSION["nomeprojeto"] . "/bean/Cliente.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/" . $_SESSION["nomeprojeto"] . "/dao/ClienteDAO.php");
+$clientes = ClienteDAO::listaclientes();
 	$total = $_GET["total"];
+	$totalgeral = $total;
 ?>
 <style type="text/css">
 	.form-control{
@@ -43,7 +47,6 @@
 	</div>
 </div>
 
-
 <div class="row">
 	<div class="form-group col-md-6" >
 		<p>DESCONTO: <em>(Em %)</em><input type="text" name="desconto" id="desconto" class="form-control input-lg" autocomplete="off"></p>
@@ -54,9 +57,30 @@
 		<p>DESCONTO DE:<input type="text" name="totaldesconto" id="totaldesconto" class="form-control input-lg" autocomplete="off" readonly></p>
 	</div>
 </div>
+
 <input type="submit" value="Finalizar Compra" class="btn btn-success input-lg">
 </form>
 <hr/>
+<div class="row">
+	<form action="index.php?pg=pagamento" method="post">
+		<div class="form-group col-md-6" >
+			<label for="cliente">Adicionar valor a Cliente: </label>
+			<select name="id">
+			<option value="">Escolha o Cliente</option>
+			<?php
+			foreach ($clientes as $cliente) {
+			?>
+				<option value="<?= $cliente->getId() ?>"><?= $cliente->getNome() ?></option>
+			<?php
+			}
+			?>	
+			</select>
+			<input type="hidden" name="credito" value="<?= number_format($totalgeral,2,",",".") ?>">
+			<input type="submit" value="Adicionar" onclick="return confirm('Deseja adicionar o valor da compra de R$ <?= number_format($totalgeral,2,",",".") ?> a este cliente?')">
+		</div>
+	</form>
+</div>
+
 <a href="index.php?pg=novavenda">Retornar a Compra</a>
 
 <script>

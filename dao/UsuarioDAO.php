@@ -26,7 +26,7 @@ class UsuarioDAO {
 			if (!$exe)
 				throw new Exception("Erro no cadastro");
 		} catch (exception $e) {
-			echo $e;
+			echo $e->getMessage();
 		}
 	}
 

@@ -24,6 +24,9 @@ ClienteDAO::pagamento($id,$credito,$debito);
 $tipo = $credito == 0 ? 'DEBITADO' : 'CREDITADO';
 $valor = $credito == 0 ? $debito : $credito;
 
+if(isset($_SESSION["produtos"]))
+    unset($_SESSION["produtos"]);
+
 $_SESSION['mensagem'] = "<div class='alert alert-success'>Valor de <strong> R$ ". number_format($valor,2,',','.')." $tipo </strong>com sucesso.</div>";
 	
 header("Location: index.php?pg=detalharcliente&id=$id");
