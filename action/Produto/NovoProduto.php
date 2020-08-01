@@ -24,7 +24,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/".$_SESSION["nomeprojeto"]."/dao/Pro
 	
 	$_SESSION['mensagem'] = "<div class='alert alert-success'>Produto cadastrado com sucesso.</div>";
 	
-	header("Location: index.php?pg=novoproduto");
+	echo "<script>location.replace('index.php?pg=formnovoproduto');</script>";
 	
 	}else{	
 	
