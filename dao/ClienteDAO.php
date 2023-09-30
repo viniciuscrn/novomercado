@@ -65,7 +65,7 @@ class ClienteDAO
         return $cliente;
     }
     //Função para retornar todos os clientes cadastrados.
-    public function listaClientes()
+    public static function listaClientes()
     {
 
         $con = conectar();

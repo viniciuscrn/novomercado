@@ -64,7 +64,26 @@ class ProdutoDAO
     }
 
     // Metodo para pesquisar um objeto produto por seu id.
-    public function pesquisaProdutoId($id)
+    public static function listaProdutos()
+    {
+        $con = conectar();
+        $query = $con->query("SELECT id,codigo,descricao,quantestoque,preco FROM produto");
+        $produtos = array();
+        $cont = 0;
+        while ($row = $query->fetch(PDO::FETCH_OBJ)) {
+            $produto = new Produto();
+            $produto->setId($row->id);
+            $produto->setCodigo($row->codigo);
+            $produto->setDescricao($row->descricao);
+            $produto->setQuantestoque($row->quantestoque);
+            $produto->setPreco($row->preco);
+            $produtos[$cont] = $produto;
+            $cont ++;
+        }
+        return $produtos;
+    }    
+    // Metodo para pesquisar um objeto produto por seu id.
+    public static function pesquisaProdutoId($id)
     {
         $con = conectar();
         
@@ -104,7 +123,7 @@ class ProdutoDAO
     }
 
     // FunÃ§Ã£o para retornar todos os produtos cadastrados.
-    public function pesquisaProdutoDescricao($codigo)
+    public static function pesquisaProdutoDescricao($codigo)
     {
         $con = conectar();
         $query = $con->query("SELECT id,codigo,descricao,quantestoque,preco FROM produto WHERE descricao like '%$codigo%'");
@@ -124,7 +143,7 @@ class ProdutoDAO
     }
 
     // Função para editar produto
-    public function editaProduto($produto)
+    public static function editaProduto($produto)
     {
         $id = $produto->getid();
         $codigo = $produto->getCodigo();

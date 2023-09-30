@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 if(empty($_SESSION["nomeprojeto"]))
 	$_SESSION["nomeprojeto"] = "novomercado";
@@ -10,7 +13,6 @@ $login = isset($_POST["login"]) ? $_POST["login"] : FALSE;
 $senha = isset($_POST["senha"]) ? $_POST["senha"] : FALSE;
 
 if ($login && $senha){
-
 	if($idusuario = UsuarioDAO::fazerLogin($login,$senha)){
 		$_SESSION["usuario"] = $idusuario;
 		header("Location: ../index.php");

@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cliente` (
-  `id` int(4) NOT NULL,
+  `id` int(4) PRIMARY KEY AUTO_INCREMENT,
   `nome` varchar(200) DEFAULT NULL,
   `telefone` varchar(20) DEFAULT NULL,
   `rua` varchar(100) DEFAULT NULL,

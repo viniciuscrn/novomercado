@@ -8,32 +8,6 @@ $produtos = ProdutoDAO::listaProdutos();
 
 ?>
 
-<script> 
-	$(document).ready(function(){ 
- 
-		$('#tabelaProdutos').dataTable({ 
-			"bPaginate": true, 
-			"iDisplayLength": 10, 
-			"oLanguage": { 
-				"sProcessing": "Aguarde enquanto os dados são carregados ...", 
-				"sLengthMenu": "Mostrar _MENU_ produtos", 
-				"sZeroRecords": "Nenhum registro correspondente ao criterio encontrado", 
-				"sEmptyTable": "Nenhum Produto Encontrado", 
-				"sInfo": "Encontrado(s) _TOTAL_ Produto(s)", 
-				"sInfoEmtpy": "Nenhum Produto Encontrado", 
-				"sInfoFiltered": "", 
-				"sSearch": "Pesquisar Produto", 
-				"oPaginate": { 
-					"sFirst":    "Primeiro", 
-					"sPrevious": "Anterior", 
-					"sNext":     "Próximo", 
-					"sLast":     "último" 
-				} 
-			} 
-		}); 
-	}); 
-	</script> 
-
 	<h3 class="page-header">Produtos Encontrados</h3>
 	<div align="center">
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
@@ -86,9 +60,6 @@ $produtos = ProdutoDAO::listaProdutos();
 
  	}
 
-//MODAL
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/".$_SESSION["nomeprojeto"]."/web/Produto/FormNovoProduto.php");
-
 }else{
 
 ?>
@@ -103,19 +74,5 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/".$_SESSION["nomeprojeto"]."/web/Pro
 </div>
 
 <?php
-//MODAL
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/".$_SESSION["nomeprojeto"]."/web/Produto/FormNovoProduto.php");
 }
 ?>
-<script type="text/javascript">
-	$(document).ready(function(){
-	   $(".btn-warning").click( function(event) {
-	      var apagar = confirm('Deseja realmente excluir este Associado?\nSerão excluídas suas declarações e carteiras geradas, assim como todos os dados dos seus dependentes.');
-	      if (apagar){
-				window.location = 'index.php';			
-	      }else{
-	         event.preventDefault();
-	      }	
-	   });
-	});
-	</script>

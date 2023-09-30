@@ -22,4 +22,5 @@ ProdutoDAO::editaProduto($produto);
 
 $_SESSION['mensagem'] = "<div class='alert alert-success'>Produto atualizado com sucesso.</div>";
 
-header("Location: index.php?pg=formeditaproduto&id=$id");
+echo "<script>location.replace('index.php?pg=formeditaproduto&id=$id');</script>";
+

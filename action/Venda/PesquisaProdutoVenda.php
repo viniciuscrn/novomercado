@@ -59,8 +59,5 @@ if($produto -> getPreco() == 0){
 
 	$_SESSION['produtos'] = $produtosSerializados;
 
-	header("Location: index.php?pg=novavenda");
+	echo "<script>location.replace('index.php?pg=novavenda');</script>";
 }
-
-
-?>

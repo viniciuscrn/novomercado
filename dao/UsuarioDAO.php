@@ -1,5 +1,6 @@
 <?php
-
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/" . $_SESSION["nomeprojeto"] . "/bean/Usuario.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/" . $_SESSION["nomeprojeto"] . "/connection/conexao.php");
 class UsuarioDAO {
 
 	public static function cadastroUsuario($usuario) {

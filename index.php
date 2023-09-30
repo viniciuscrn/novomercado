@@ -68,6 +68,7 @@ $us = UsuarioDAO::pesquisaUsuarioId($idusuario);
                         <ul class="dropdown-menu">
                             <li><a href="index.php?pg=formpesquisaproduto">Pesquisar</a></li>
                             <li><a href="index.php?pg=formnovoproduto">Novo</a></li>
+                            <li><a href="index.php?pg=listarprodutos">Listar</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
@@ -157,8 +158,13 @@ $us = UsuarioDAO::pesquisaUsuarioId($idusuario);
                 case "formeditaproduto":
                     include "web/Produto/FormEditaProduto.php";
                     break;
+
                 case "editaproduto":
                     include "action/Produto/EditaProduto.php";
+                    break;
+                
+                case "listarprodutos":
+                    include "action/Produto/ListaProdutos.php";
                     break;
 
                     //Clientes

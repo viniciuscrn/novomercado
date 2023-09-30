@@ -154,14 +154,11 @@ class VendaDAO {
             return implode("/", array_reverse(explode("-", $data)));
         }
     }
-
 	//VENDAS DO USUÁRIO
-
 	public static function calculavendascaixa($datainicio, $datafim, $idusuario){
 		$con = conectar();
 		
 		$sql = "SELECT sum(total) FROM `venda` WHERE usuario_idusuario = $idusuario and dia BETWEEN $datainicio and $datafim";
-		
 
 		try {
 			$stmte = $con->prepare("SELECT sum(total) FROM `venda` WHERE usuario_idusuario = ? and dia BETWEEN ? and ?");
